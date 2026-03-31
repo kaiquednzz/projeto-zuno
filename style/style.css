@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+/* Michroma */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inconsolata:wght@200..900&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+/* Cormorant Garamond */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inconsolata:wght@200..900&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+/* DM Sans */
+
+:root {
+    --black-zuno: #080808;
+    --gray-zuno: #1A1A1A;
+    --gold-zuno: #C9A84C;
+    --gold-light-zuno: #E2C47A;
+    --white-zuno: #F5F2ED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--black-zuno);
+    color: var(--white-zuno);
+    position: relative;
+}
+
+/* ── HEADER ── */
+header {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    padding-right: 40px;
+    background-color: var(--black-zuno);
+}
+
+header img {
+    width: 10%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white-zuno);
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 200;
+    transition: all 0.3s ease;
+}
+
+header nav ul li {
+    cursor: pointer;
+}
+
+header a:hover {
+    color: var(--gold-zuno);
+    border-bottom: 1px solid var(--gold-zuno);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ── MAIN ── */
+main {
+    overflow: hidden;
+    padding-top: 59px;
+}
+
+/* ── HERO ── */
+.banner-hero {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(73deg, #1a1a1a, #080808, #383125);
+    background-size: 180% 180%;
+    animation: gradient-animation 20s ease infinite;
+    padding: 16px;
+    height: 700px;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.banner-hero .textos {
+    max-width: 600px;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-family: Cormorant Garamond;
+}
+
+.banner-hero .textos h3 {
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.banner-hero .textos h1 {
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--gold-zuno);
+}
+
+.banner-hero .textos h2 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.banner-hero a {
+    width: fit-content;
+    text-decoration: none;
+    color: var(--white-zuno);
+    font-family: DM Sans;
+    font-weight: 200;
+    font-size: 16px;
+    border: 2px solid var(--gold-zuno);
+    padding: 16px 32px;
+    margin-left: 50px;
+    transition: all 0.3s ease;
+}
+
+.banner-hero a:hover {
+    background-color: #494130;
+}
+
+.banner-hero .bateria {
+    width: 1200px;
+    position: absolute;
+    left: 500px;
+    top: 75px;
+    filter: drop-shadow(0px 10px 30px rgb(0, 0, 0));
+}
+
+/* ── ARTICLE ── */
+article {
+    margin: 100px;
+    margin-top: 0px;
+}
+
+/* ── BRAND ── */
+.brand {
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+
+.brand h2 {
+    font-size: 26px;
+    font-family: Michroma;
+    font-weight: 100;
+}
+
+/* ── PRODUTOS ── */
+.produtos {
+    margin-bottom: 150px;
+}
+
+.produtos h2 {
+    font-size: 36px;
+    font-family: Michroma;
+    font-weight: 100;
+    color: var(--gold-zuno);
+    margin-bottom: 30px;
+}
+
+.produtos-container {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.produto-grid {
+    width: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.288);
+    background-color: var(--gray-zuno);
+}
+
+.produto-grid .imagem-produto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(40, 40, 40);
+    border-radius: 8px;
+    height: 250px;
+}
+
+.produto-grid img {
+    width: 100%;
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.633));
+}
+
+.produto-grid .textos {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.produto-grid .textos h3 {
+    font-family: Michroma;
+    font-weight: 100;
+    color: var(--gold-light-zuno);
+    margin-bottom: 10px;
+}
+
+.produto-grid .textos p {
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.produto-grid .textos a {
+    text-decoration: none;
+    color: var(--white-zuno);
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 16px;
+    border: 2px solid var(--gold-zuno);
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+
+}
+
+.produto-grid .textos a:hover {
+    background-color: #494130;
+}
+
+/* ── POR QUE ZUNO ── */
+.pq-zuno {
+    margin-bottom: 150px;
+}
+
+.pq-zuno h2 {
+    font-size: 36px;
+    font-family: Michroma;
+    font-weight: 100;
+    color: var(--gold-zuno);
+    margin-bottom: 100px;
+}
+
+.pq-zuno-container {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.pq-zuno-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+}
+
+.pq-zuno-grid h3 {
+    text-align: center;
+    font-size: 26px;
+    font-family: Michroma;
+    font-weight: 100;
+    color: var(--gold-light-zuno);
+    margin-bottom: 30px;
+}
+
+.pq-zuno-grid p {
+    font-size: 20px;
+    font-family: DM Sans;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* ── PRODUTO EM FOCO ── */
+.produto-em-foco {
+    margin: auto;
+    display: flex;
+    margin-bottom: 150px;
+    max-width: 1200px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: var(--gray-zuno);
+    border: 1px solid var(--gold-zuno);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.288);
+}
+
+.produto-em-foco .imagem-container {
+    width: 600px;
+    border-radius: 20px 0px 0px 20px;
+    overflow: hidden;
+}
+
+.produto-em-foco .imagem-container img {
+    width: 100%;
+}
+
+.produto-em-foco .textos {
+    margin: 30px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.produto-em-foco .textos h2 {
+    font-family: Michroma;
+    color: var(--gold-light-zuno);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.produto-em-foco .textos p {
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.produto-em-foco .textos a {
+    width: fit-content;
+    text-decoration: none;
+    color: var(--white-zuno);
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 16px;
+    border: 2px solid var(--gold-zuno);
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+}
+
+.produto-em-foco .textos a:hover {
+    background-color: #494130;
+}
+
+/* ── DEPOIMENTOS ── */
+.depoimentos {
+    margin-bottom: 150px;
+}
+
+.depoimentos h2 {
+    font-size: 36px;
+    font-family: Michroma;
+    font-weight: 100;
+    color: var(--gold-zuno);
+    margin-bottom: 100px;
+}
+
+.depoimentos-container {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.depoimentos-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 280px;
+    background-color: var(--gray-zuno);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--gold-zuno);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.288);
+}
+
+.depoimentos-grid .usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.depoimentos-grid .usuario img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.depoimentos-grid .usuario h4 {
+    font-size: 20px;
+    font-family: Michroma;
+    font-weight: 100;
+    color: var(--gold-light-zuno);
+    margin-bottom: 10px;
+}
+
+.depoimentos-grid p {
+    font-size: 20px;
+    font-family: DM Sans;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* ── CTA FINAL ── */
+.cta-final {
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-final h2 {
+    font-size: 36px;
+    font-family: Michroma;
+    font-weight: 100;
+    color: var(--gold-zuno);
+    margin-bottom: 30px;
+}
+
+.cta-final p {
+    font-size: 20px;
+    font-family: DM Sans;
+    font-weight: 300;
+    text-align: center;
+}
+
+.cta-final a {
+    margin-top: 30px;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--white-zuno);
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 16px;
+    border: 2px solid var(--gold-zuno);
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+}
+
+.cta-final a:hover {
+    background-color: #494130;
+}
+
+/* ── FOOTER ── */
+footer {
+    background-color: var(--black-zuno);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 10%;
+    margin-bottom: 30px;
+}
+
+footer nav ul {
+    display: flex;
+}
+
+footer nav ul li {
+    list-style-type: none;
+}
+
+footer nav ul li a {
+    text-decoration: underline;
+    color: var(--white-zuno);
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+footer nav ul li a:hover {
+    color: var(--gold-zuno);
+}
+
+footer p {
+    text-align: start;
+    color: var(--white-zuno);
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 16px;
+}
