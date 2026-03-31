@@ -24,6 +24,10 @@ body {
     position: relative;
 }
 
+strong {
+    color: var(--gold-zuno);
+}
+
 /* ── HEADER ── */
 header {
     display: flex;
@@ -33,7 +37,9 @@ header {
     align-items: center;
     padding: 16px;
     padding-right: 40px;
-    background-color: var(--black-zuno);
+    background: rgba(8, 8, 8, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 header img {
@@ -195,6 +201,12 @@ article {
     border-radius: 20px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.288);
     background-color: var(--gray-zuno);
+    transition: all 0.3s ease;
+}
+
+.produto-grid:hover {
+    transform: translateY(-6px);
+    border: 1px solid var(--gold-zuno);
 }
 
 .produto-grid .imagem-produto {
@@ -330,7 +342,7 @@ article {
 .produto-em-foco .textos p {
     font-family: DM Sans;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 200;
     margin-bottom: 30px;
     text-align: justify;
 }
@@ -406,7 +418,7 @@ article {
 .depoimentos-grid p {
     font-size: 20px;
     font-family: DM Sans;
-    font-weight: 300;
+    font-weight: 200;
     text-align: justify;
 }
 
@@ -499,6 +511,6 @@ footer p {
     text-align: start;
     color: var(--white-zuno);
     font-family: DM Sans;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 16px;
 }
