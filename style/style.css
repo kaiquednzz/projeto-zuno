@@ -654,3 +654,221 @@ footer p {
     font-weight: 300;
     font-size: 16px;
 }
+
+
+
+
+@media (max-width: 835px) {
+/* TABLET */
+    article {
+        margin: 30px;
+        padding: 0px;
+    }
+
+    .banner-hero {
+        height: 900px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-hero .textos {
+        max-width: 600px;
+        z-index: 2;
+        text-shadow: #080808 1px 1px 20px;
+    }
+
+    .banner-hero .textos h1 {
+        line-height: 50px;
+    }
+
+    .banner-hero a {
+        margin-left: 0px;
+    }
+
+    .banner-hero .bateria {
+        position: static;
+        left: 100px;
+        z-index: 1;
+        width: 120%;
+    }
+
+    .produtos-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .produto-grid {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .pq-zuno-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        }
+
+    .pq-zuno-grid {
+        max-width: 600px;
+    }
+
+    .produto-em-foco {
+        height: 500px;
+    }
+
+    .produto-em-foco .imagem-container {
+        width: 500px;
+    }
+
+    .produto-em-foco .textos {
+        max-width: 200px;
+        margin: 30px;
+    }
+
+    .produto-em-foco .textos h2 {
+        font-size: 24px;
+    }
+
+    .produto-em-foco .textos p {
+        font-size: 18px;
+    }
+
+    .tecnologia-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .depoimentos-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+    }
+
+    .sobre-container img {
+        display: none;
+    }
+}
+
+
+@media (max-width: 441px) {
+/* MOBILE */
+    header {
+        gap: 8px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header img {
+        margin: 0px;
+        width: 50%;
+    }
+
+    main {
+        padding-top: 120px;
+    }
+
+    .banner-hero {
+        height: 500px;
+    }
+
+    .banner-hero .textos {
+        margin: auto;
+        max-width: 300px;
+    }
+
+    .banner-hero img {
+        display: none;
+    }
+
+    .brand h2 {
+        font-size: 22px;
+    }
+
+    .produtos h2 {
+        font-size: 24px;
+    }
+
+    .produto-grid {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .pq-zuno h2 {
+        font-size: 24px;
+    }
+
+    .pq-zuno-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pq-zuno-grid {
+        margin: auto;
+        max-width: 300px;
+    }
+
+    .produto-em-foco {
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .produto-em-foco .imagem-container {
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .produto-em-foco .imagem-container img {
+        fit-content: cover;
+    }
+
+    .produto-em-foco .textos {
+        margin: 20px;
+        max-width: 300px;
+    }
+
+    .tecnologia .titulo-tecnologia h2 {
+        font-size: 24px;
+    }
+
+    .tecnologia .titulo-tecnologia h3 {
+        font-size: 16px;
+    }
+
+    .tecnologia-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tecnologia-grid {
+        margin: auto;
+        max-width: 300px;
+    }
+
+    .tecnologia-grid .textos {
+        max-width: 300px;
+        margin-bottom: 0px;
+    }
+
+    .tecnologia-grid .textos p {
+        margin-bottom: 0px;
+    }
+
+    .tecnologia-grid img {
+        width: 100%;
+    }
+
+    .sobre {
+        height: 700px;
+    }
+
+    .sobre h2 {
+        font-size: 24px;
+    }
+}
