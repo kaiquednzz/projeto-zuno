@@ -320,7 +320,8 @@ article {
 }
 
 .produto-em-foco .imagem-container {
-    width: 600px;
+    min-width: 600px;
+    max-width: 600px;
     border-radius: 20px 0px 0px 20px;
     overflow: hidden;
 }
@@ -655,63 +656,59 @@ footer p {
     font-size: 16px;
 }
 
-
-
-
-@media (max-width: 835px) {
-/* TABLET */
-    article {
-        margin: 30px;
-        padding: 0px;
+@media (min-width: 1400px) {
+    .banner-hero .bateria {
+        left: unset;
+        right: -100px;
     }
 
-    .banner-hero {
-        height: 900px;
-        justify-content: center;
-        align-items: center;
+    .sobre .sobre-container img {
+        left: unset;
+        right: 60px;
     }
+}
 
+@media (max-width: 1300px) {
     .banner-hero .textos {
-        max-width: 600px;
-        z-index: 2;
-        text-shadow: #080808 1px 1px 20px;
-    }
-
-    .banner-hero .textos h1 {
-        line-height: 50px;
-    }
-
-    .banner-hero a {
-        margin-left: 0px;
+        max-width: 500px;
     }
 
     .banner-hero .bateria {
-        position: static;
-        left: 100px;
-        z-index: 1;
-        width: 120%;
+        left: 350px;
     }
 
     .produtos-container {
-        flex-direction: column;
-        align-items: center;
         gap: 50px;
     }
 
     .produto-grid {
-        width: 100%;
-        max-width: 400px;
-        box-sizing: border-box;
+        height: 370px;
     }
 
-    .pq-zuno-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        }
+    .produto-grid .imagem-produto {
+        height: 180px;
+    }
+}
 
-    .pq-zuno-grid {
-        max-width: 600px;
+@media (max-width: 1275px) {
+    .tecnologia-container .tecnologia-grid {
+        width: 400px;
+        height: 600px;
+    }
+
+    .tecnologia-container .tecnologia-grid img {
+        width: 100%;
+        ;
+    }
+
+    .sobre .sobre-container img {
+        left: 700px;
+    }
+}
+
+@media (max-width: 1160px) {
+    .banner-hero .bateria {
+        left: 300px;
     }
 
     .produto-em-foco {
@@ -735,6 +732,168 @@ footer p {
         font-size: 18px;
     }
 
+    .tecnologia-container .tecnologia-grid {
+        width: 300px;
+        height: 500px;
+    }
+
+    .tecnologia-container .tecnologia-grid p {
+        font-size: 18px;
+    }
+
+    .tecnologia-container .tecnologia-grid img {
+        width: 100%;
+        ;
+    }
+
+    .depoimentos .depoimentos-container {
+        gap: 30px;
+    }
+
+    .sobre .sobre-container img {
+        left: 600px;
+    }
+
+    .sobre .sobre-container .textos {
+        margin: 0px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .produtos-container {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .produtos-container .produto-grid {
+        width: 400px;
+        height: auto;
+    }
+
+    .produtos-container .produto-grid .imagem-produto {
+        height: 300px;
+    }
+
+    .pq-zuno-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .pq-zuno-grid {
+        max-width: 600px;
+    }
+
+    .produto-em-foco {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .produto-em-foco .imagem-container {
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+        height: 350px;
+        border-radius: 20px 20px 0px 0px;
+        overflow: hidden;
+    }
+
+    .produto-em-foco .imagem-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .produto-em-foco .textos {
+        margin: 30px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .banner-hero {
+        height: 900px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-hero .textos {
+        margin-top: 100px;
+        max-width: 600px;
+        z-index: 2;
+        text-shadow: #080808 1px 1px 20px;
+    }
+
+    .banner-hero .textos h1 {
+        line-height: 50px;
+    }
+
+    .banner-hero a {
+        margin-left: 0px;
+    }
+
+    .banner-hero .bateria {
+        position: static;
+        left: 100px;
+        z-index: 1;
+        width: 120%;
+    }
+    
+    .sobre .sobre-container img {
+        left: 500px;
+    }
+}
+
+
+@media (max-width: 835px) {
+
+    /* TABLET */
+    article {
+        margin: 30px;
+        padding: 0px;
+    }
+
+    .produtos-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .produto-grid {
+        height: auto;
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .produto-grid .imagem-produto {
+        height: 200px;
+    }
+
+    .produto-em-foco {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .produto-em-foco .imagem-container {
+        width: 100%;
+        min-width: unset;
+        height: 300px;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .produto-em-foco .imagem-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .produto-em-foco .textos {
+        margin: 30px;
+        max-width: 100%;
+    }
+
     .tecnologia-container {
         flex-direction: column;
         align-items: center;
@@ -747,22 +906,48 @@ footer p {
         gap: 50px;
     }
 
+    .sobre {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+
     .sobre-container {
-        flex-direction: column;
+        max-width: 300px;
+        justify-content: center;
     }
 
     .sobre-container img {
         display: none;
     }
+
+    .sobre .sobre-container .textos {
+        margin: 0;
+    }
+
+    .sobre .sobre-container .textos p {
+        font-size: 20px;
+    }
 }
 
 
 @media (max-width: 441px) {
-/* MOBILE */
+    /* MOBILE */
+
+    p {
+        font-size: 16px;
+    }
+
     header {
+        margin: auto;
+        padding: 10px;
         gap: 8px;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     header img {
@@ -788,7 +973,7 @@ footer p {
     }
 
     .brand h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .produtos h2 {
@@ -800,8 +985,13 @@ footer p {
         max-width: 300px;
     }
 
+    .produto-grid p {
+        font-size: 16px;
+    }
+
     .pq-zuno h2 {
         font-size: 24px;
+        margin-bottom: 50px;
     }
 
     .pq-zuno-container {
@@ -812,6 +1002,10 @@ footer p {
     .pq-zuno-grid {
         margin: auto;
         max-width: 300px;
+    }
+
+    .pq-zuno-grid p {
+        font-size: 16px;
     }
 
     .produto-em-foco {
@@ -833,6 +1027,10 @@ footer p {
         max-width: 300px;
     }
 
+    .produto-em-foco .textos p {
+        font-size: 16px;
+    }
+
     .tecnologia .titulo-tecnologia h2 {
         font-size: 24px;
     }
@@ -842,13 +1040,15 @@ footer p {
     }
 
     .tecnologia-container {
+        margin: auto;
         display: flex;
         flex-direction: column;
     }
 
-    .tecnologia-grid {
-        margin: auto;
-        max-width: 300px;
+    .tecnologia-container .tecnologia-grid {
+        margin: 0px;
+        height: auto;
+        max-width: 250px;
     }
 
     .tecnologia-grid .textos {
@@ -857,18 +1057,58 @@ footer p {
     }
 
     .tecnologia-grid .textos p {
-        margin-bottom: 0px;
+        font-size: 16px;
     }
 
     .tecnologia-grid img {
         width: 100%;
     }
 
+    .depoimentos-container .depoimentos-grid p {
+        font-size: 16px;
+    }
+
     .sobre {
-        height: 700px;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+        padding: 40px 20px;
+        border-radius: 10px;
     }
 
     .sobre h2 {
         font-size: 24px;
+    }
+
+    .sobre-container {
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .sobre-container img {
+        display: none;
+    }
+
+    .sobre .sobre-container .textos {
+        margin: 0;
+    }
+
+    .sobre .sobre-container .textos p {
+        font-size: 16px;
+    }
+
+    .cta-final h2 {
+        font-size: 24px;
+    }
+
+    .cta-final p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 321px) {
+    .tecnologia-container .tecnologia-grid {
+        max-width: 225px;
     }
 }
